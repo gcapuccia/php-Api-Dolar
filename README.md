@@ -13,14 +13,15 @@ Este proyecto en PHP consulta una API externa para obtener la cotización del d�
 Antes de comenzar, asegúrate de tener:
 
 - PHP 7.4 o superior.
-- Composer instalado.
-- Dependencias necesarias según `composer.json`.
-
+- 
 ## 🛠 Instalación
 
 Sigue estos pasos para poner en marcha el proyecto:
 
 1. Clona el repositorio:
    ```sh
-   git clone https://github.com/tu-usuario/tu-repositorio.git
-   cd tu-repositorio
+   git clone https://github.com/gcapuccia/php-Api-Dolar.git
+   cd php-Api-Dolar
+2.Levantar servidor local de php
+```sh
+php -S 127.68.1.1:8800
