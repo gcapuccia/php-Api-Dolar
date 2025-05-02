@@ -88,7 +88,7 @@ curl_close($iniciarCURL);
   <fieldset class="grid">
     <input type="number" id="ingreso"  placeholder="Dolares A Convertir" />
     <input type="text" id="resultado"  placeholder="Pesos Convertidos" readonly/>
-    <input type="submit" id="conver" value="Convertir" />
+    <!-- <input type="submit" id="conver" value="Convertir" /> -->
   </fieldset>
 
 
@@ -99,9 +99,25 @@ curl_close($iniciarCURL);
 </footer>
 
 <script>
-    var conver = document.getElementById("conver");
-    conver.addEventListener("click", function(event) {
+    //evento Click
+    /*     var conver = document.getElementById("conver");
+    conver.addEventListener("clic", function(event) {
         event.preventDefault(); // Evita el envío del formulario
+        var monto = document.getElementById("ingreso").value;
+        var respuesta = monto * <?= $data[0]['venta'] ?>; // Cambia el índice según la moneda que desees usar
+        document.getElementById("resultado").value = respuesta.toFixed(2); // Muestra el resultado con 2 decimales
+    }); */
+
+    /*     //misma funcion pero con el evento sin clic, solo con el evento de cambio
+        var ingreso = document.getElementById("ingreso");
+        ingreso.addEventListener("change", function(event) {
+            var monto = document.getElementById("ingreso").value;
+            var respuesta = monto * <?= $data[0]['venta'] ?>; // Cambia el índice según la moneda que desees usar
+            document.getElementById("resultado").value = respuesta.toFixed(2); // Muestra el resultado con 2 decimales
+        }); */
+    //otra forma de hacerlo con el evento input, que se ejecuta cada vez que se cambia el valor del input
+    var ingreso = document.getElementById("ingreso");
+    ingreso.addEventListener("input", function(event) {
         var monto = document.getElementById("ingreso").value;
         var respuesta = monto * <?= $data[0]['venta'] ?>; // Cambia el índice según la moneda que desees usar
         document.getElementById("resultado").value = respuesta.toFixed(2); // Muestra el resultado con 2 decimales
