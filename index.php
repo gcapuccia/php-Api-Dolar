@@ -45,14 +45,14 @@ curl_close($iniciarCURL);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link  rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.slate.min.css">
-    <title>Document</title>
+    <title>Api Dolar</title>
 </head>
 <body>
 
 <!-- centrar todo el contenido de la pagina -->
 <div class="container" style="text-align: center; margin-top: 50px;">
-    <h1>API Dolar</h1>
-    <p>Consulta el valor del dolar en diferentes monedas.</p>
+    <h1>API Dolar PHP</h1>
+    <p>Consulta el valor del dolar hoy.</p>
 
 <!-- una tabla con los valores de las monedas -->
 <table class="table" style="margin: 0 auto; width: 80%; text-align: center;">
@@ -86,8 +86,8 @@ curl_close($iniciarCURL);
 <br>
 
   <fieldset class="grid">
-    <input type="number" id="ingreso"  placeholder="Monto a Convertir" />
-    <input type="text" id="resultado"  placeholder="Password" readonly/>
+    <input type="number" id="ingreso"  placeholder="Dolares A Convertir" />
+    <input type="text" id="resultado"  placeholder="Pesos Convertidos" readonly/>
     <input type="submit" id="conver" value="Convertir" />
   </fieldset>
 
